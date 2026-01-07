@@ -11,7 +11,7 @@ def lambda_handler(event, context):
     source_bucket = event['Records'][0]['s3']['bucket']['name']
     key = event['Records'][0]['s3']['object']['key']
 
-    destination_bucket = 'image-pipeline-processed-ahmad' 
+    destination_bucket = 'image-resizer-destination-908' 
     
     download_path = '/tmp/{}'.format(key)
     upload_path = '/tmp/processed-{}'.format(key)
