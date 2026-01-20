@@ -27,11 +27,20 @@ When a user uploads an image to a source S3 bucket, it automatically triggers a 
 
 ```text
 Serverless-VisionFlow/
-├── main.tf                 # Terraform configuration for AWS resources
-├── imageresizer.py         # Python Lambda function logic
-├── opencv_layer/           # Directory containing the OpenCV zip for the Layer
-│   └── opencv_layer.zip    
-└── README.md               # Project documentation
+├── LambdaCode/
+│   └── imageresizer.py         # Python Lambda function logic
+├── opencv_layer/
+│   └── opencv_layer.zip        # Pre-packaged OpenCV dependency
+├── terraform/                  # Infrastructure as Code
+│   ├── providers.tf
+│   ├── variables.tf
+│   ├── s3.tf
+│   ├── iam.tf
+│   ├── lambda.tf
+│   ├── sns.tf
+│   └── .terraform.lock.hcl
+├── .gitignore
+└── README.md
 ```
 
 ## ⚙️ Prerequisites
