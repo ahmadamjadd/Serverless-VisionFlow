@@ -32,7 +32,8 @@ Serverless-VisionFlow/
 ├── opencv_layer/           # Directory containing the OpenCV zip for the Layer
 │   └── opencv_layer.zip    
 └── README.md               # Project documentation
-'''
+```
+
 ## ⚙️ Prerequisites
 
 * **AWS Account**: With appropriate permissions to create S3 buckets, Lambda functions, IAM roles, and SNS topics.
