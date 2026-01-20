@@ -51,7 +51,7 @@ cd Serverless-VisionFlow
 
 ### 2. Prepare the OpenCV Layer
 
-Ensure you have the `opencv-layer.zip` file ready[cite: 105]. This project uses a Lambda Layer to separate the heavy OpenCV library from the core logic.
+Ensure you have the `opencv-layer.zip` file ready. This project uses a Lambda Layer to separate the heavy OpenCV library from the core logic.
 
 > **Note:** If you need to rebuild the layer, ensure it is compatible with Python 3.12 and the x86_64 architecture.
 
