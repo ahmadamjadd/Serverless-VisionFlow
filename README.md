@@ -75,28 +75,28 @@ terraform apply
 
 ### 5. Confirm Subscription
 
-[cite_start]Check the email inbox you defined in `main.tf`[cite: 99]. You will receive a "Subscription Confirmation" email from AWS SNS. [cite_start]Click the link to confirm the subscription[cite: 95].
+Check the email inbox you defined in `main.tf`. You will receive a "Subscription Confirmation" email from AWS SNS. Click the link to confirm the subscription.
 
 ## 🧪 Usage
 
 1.  Log in to the AWS Console or use the AWS CLI.
-2.  [cite_start]Navigate to the source bucket created by Terraform (e.g., `image-resizer-source-908` [cite: 55, 99]).
+2.  Navigate to the source bucket created by Terraform (e.g., `image-resizer-source-908`).
 3.  Upload a `.jpg` file.
-4.  [cite_start]Check the **Destination Bucket** (`image-resizer-destination-908` [cite: 45, 99][cite_start]) for the processed image (prefixed with `processed-` [cite: 4]).
-5.  [cite_start]Check your email for the success notification[cite: 95].
+4.  Check the **Destination Bucket** (`image-resizer-destination-908`) for the processed image (prefixed with `processed-`).
+5.  Check your email for the success notification.
 
 ## 🔧 Technical Implementation Details
 
 ### Terraform Resources
 
-* [cite_start]**S3 Buckets**: Source, Destination, and Layer storage[cite: 99].
-* [cite_start]**Lambda Function**: configured with `Python 3.12` runtime[cite: 22, 106].
-* [cite_start]**Lambda Layer**: Attached to the function to provide `cv2` and `numpy`[cite: 34, 106].
-* [cite_start]**IAM Roles & Policies**: Least privilege policies granting access strictly to the specific S3 buckets and SNS topic[cite: 102, 104].
+* **S3 Buckets**: Source, Destination, and Layer storage.
+* **Lambda Function**: configured with `Python 3.12` runtime.
+* **Lambda Layer**: Attached to the function to provide `cv2` and `numpy`.
+* **IAM Roles & Policies**: Least privilege policies granting access strictly to the specific S3 buckets and SNS topic.
 
 ### OpenCV Layer
 
-This project was a specific implementation exercise in using **Lambda Layers**. [cite_start]By abstracting OpenCV into a layer, the main function code remains clean and the deployment updates are significantly faster since the heavy library doesn't need to be re-uploaded with every code change[cite: 106].
+This project was a specific implementation exercise in using **Lambda Layers**. By abstracting OpenCV into a layer, the main function code remains clean and the deployment updates are significantly faster since the heavy library doesn't need to be re-uploaded with every code change.
 
 ## 🤝 Contributing
 
